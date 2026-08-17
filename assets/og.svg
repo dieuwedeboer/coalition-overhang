@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <filter id="card-shadow" x="-8%" y="-8%" width="120%" height="120%">
+      <feDropShadow dx="8" dy="6" stdDeviation="0" flood-color="#0c1b30" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="#10243f"/>
+
+  <text x="64" y="78" fill="#e8c547" font-family="Liberation Serif, Georgia, serif" font-size="22" letter-spacing="6">2026 GENERAL ELECTION</text>
+  <text x="64" y="186" fill="#f4efe4" font-family="Liberation Serif, Georgia, serif" font-size="76" font-weight="700">Two Votes, Two MPs.</text>
+
+  <g filter="url(#card-shadow)" transform="rotate(-1.1 64 380)">
+    <rect x="64" y="250" width="508" height="260" rx="14" fill="#1a2d48" stroke="#e8c547" stroke-opacity="0.45" stroke-width="2"/>
+    <text x="92" y="298" fill="#e8c547" font-family="Liberation Serif, Georgia, serif" font-size="18" letter-spacing="4">PARTY VOTE</text>
+    <text x="92" y="368" fill="#f4efe4" font-family="Liberation Serif, Georgia, serif" font-size="44" font-weight="700">NZ First or ACT</text>
+    <text x="92" y="418" fill="#cfc6b6" font-family="Liberation Serif, Georgia, serif" font-size="22">Whichever partner you prefer.</text>
+  </g>
+
+  <g transform="translate(564 248) scale(1.28 0.825)">
+    <path fill="#0c1b30" d="M32 0 L18 18 L36 34 L14 56 L34 78 L16 102 L38 126 L12 152 L34 176 L18 200 L38 226 L14 250 L34 276 L20 298 L30 320 L0 320 L0 0 Z"/>
+    <path fill="none" stroke="#e8c547" stroke-width="2.4" d="M32 0 L18 18 L36 34 L14 56 L34 78 L16 102 L38 126 L12 152 L34 176 L18 200 L38 226 L14 250 L34 276 L20 298 L30 320"/>
+  </g>
+
+  <g filter="url(#card-shadow)" transform="rotate(1.1 1136 380)">
+    <rect x="628" y="250" width="508" height="260" rx="14" fill="#1a2d48" stroke="#e8c547" stroke-opacity="0.45" stroke-width="2"/>
+    <text x="656" y="298" fill="#e8c547" font-family="Liberation Serif, Georgia, serif" font-size="18" letter-spacing="4">ELECTORATE VOTE</text>
+    <text x="656" y="368" fill="#f4efe4" font-family="Liberation Serif, Georgia, serif" font-size="44" font-weight="700">National</text>
+    <text x="656" y="418" fill="#cfc6b6" font-family="Liberation Serif, Georgia, serif" font-size="22">Except Epsom and Tāmaki.</text>
+  </g>
+
+  <text x="64" y="580" fill="#9a9286" font-family="Liberation Serif, Georgia, serif" font-size="24">vote.coalitiontracker.nz</text>
+</svg>

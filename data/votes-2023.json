@@ -1,0 +1,810 @@
+{
+  "New Lynn": {
+    "title": "New Lynn (New Zealand electorate)",
+    "byParty": {
+      "National": 15886,
+      "Labour": 14873,
+      "Green": 5376,
+      "ACT": 2301,
+      "New Zealand Loyal": 1148
+    },
+    "source": "https://en.wikipedia.org/wiki/New_Lynn_(New_Zealand_electorate)"
+  },
+  "Te Atatū": {
+    "title": "Te Atatū (electorate)",
+    "byParty": {
+      "Labour": 14202,
+      "National": 14071,
+      "Green": 3516,
+      "ACT": 2506,
+      "TPM": 1261
+    },
+    "source": "https://en.wikipedia.org/wiki/Te_Atatū_(electorate)"
+  },
+  "Wellington Central": {
+    "title": "Wellington Central (electorate)",
+    "byParty": {
+      "Green": 18439,
+      "Labour": 12373,
+      "National": 11555,
+      "TOP": 1554,
+      "NZ First": 493,
+      "Aotearoa Legalise Cannabis Party": 418,
+      "Animal Justice Party Aotearoa New Zealand": 111,
+      "Vision New Zealand": 80,
+      "Workers Now": 67
+    },
+    "source": "https://en.wikipedia.org/wiki/Wellington_Central_(electorate)"
+  },
+  "Wigram": {
+    "title": "Wigram (electorate)",
+    "byParty": {
+      "Labour": 15590,
+      "National": 14411,
+      "Green": 3780,
+      "ACT": 1520,
+      "Aotearoa Legalise Cannabis Party": 696,
+      "New Zealand Loyal": 392,
+      "Leighton Baker Party": 284,
+      "Economic Euthenics": 74
+    },
+    "source": "https://en.wikipedia.org/wiki/Wigram_(electorate)"
+  },
+  "Auckland Central": {
+    "title": "Auckland Central (electorate)",
+    "byParty": {
+      "Green": 16624,
+      "National": 12728,
+      "Labour": 2608,
+      "ACT": 1235,
+      "TOP": 462,
+      "Aotearoa Legalise Cannabis Party": 365,
+      "Animal Justice Party Aotearoa New Zealand": 135,
+      "Rock The Vote NZ": 91,
+      "New Nation Party": 89
+    },
+    "source": "https://en.wikipedia.org/wiki/Auckland_Central_(electorate)"
+  },
+  "Banks Peninsula": {
+    "title": "Banks Peninsula (electorate)",
+    "byParty": {
+      "National": 17860,
+      "Labour": 17464,
+      "Green": 8325,
+      "ACT": 2073,
+      "NZ First": 1598,
+      "NewZeal": 544,
+      "DemocracyNZ": 474,
+      "Animal Justice Party Aotearoa New Zealand": 369,
+      "Independent politician": 184
+    },
+    "source": "https://en.wikipedia.org/wiki/Banks_Peninsula_(electorate)"
+  },
+  "Bay of Plenty": {
+    "title": "Bay of Plenty (electorate)",
+    "byParty": {
+      "National": 23303,
+      "Labour": 7898,
+      "ACT": 4202,
+      "Green": 4036,
+      "NZ First": 4025,
+      "Leighton Baker Party": 524,
+      "Animal Justice Party Aotearoa New Zealand": 375
+    },
+    "source": "https://en.wikipedia.org/wiki/Bay_of_Plenty_(electorate)"
+  },
+  "Botany": {
+    "title": "Botany (New Zealand electorate)",
+    "byParty": {
+      "National": 24769,
+      "Labour": 8432,
+      "ACT": 1959,
+      "New Zealand Loyal": 624,
+      "Animal Justice Party Aotearoa New Zealand": 428,
+      "New Conservative Party (New Zealand)": 300
+    },
+    "source": "https://en.wikipedia.org/wiki/Botany_(New_Zealand_electorate)"
+  },
+  "Christchurch Central": {
+    "title": "Christchurch Central",
+    "byParty": {
+      "Labour": 15553,
+      "National": 13712,
+      "Green": 5441,
+      "NZ First": 1563,
+      "ACT": 1395,
+      "Aotearoa Legalise Cannabis Party": 680,
+      "Animal Justice Party Aotearoa New Zealand": 376
+    },
+    "source": "https://en.wikipedia.org/wiki/Christchurch_Central"
+  },
+  "Christchurch East": {
+    "title": "Christchurch East",
+    "byParty": {
+      "Labour": 15163,
+      "National": 12766,
+      "Green": 4594,
+      "NZ First": 2030,
+      "ACT": 1679,
+      "Aotearoa Legalise Cannabis Party": 901,
+      "New Conservative Party (New Zealand)": 615,
+      "Animal Justice Party Aotearoa New Zealand": 353
+    },
+    "source": "https://en.wikipedia.org/wiki/Christchurch_East"
+  },
+  "Coromandel": {
+    "title": "Coromandel (electorate)",
+    "byParty": {
+      "National": 24914,
+      "Labour": 7900,
+      "Green": 4942,
+      "ACT": 2725,
+      "NZ First": 3145,
+      "New Zealand Loyal": 2315,
+      "NZ Outdoors Party": 273
+    },
+    "source": "https://en.wikipedia.org/wiki/Coromandel_(electorate)"
+  },
+  "Dunedin": {
+    "title": "Dunedin (electorate)",
+    "byParty": {
+      "Labour": 17111,
+      "National": 9131,
+      "Green": 8031,
+      "TOP": 1891,
+      "ACT": 1696,
+      "NZ First": 1304,
+      "Aotearoa Legalise Cannabis Party": 564,
+      "New Zealand Loyal": 540,
+      "New Conservative Party (New Zealand)": 160
+    },
+    "source": "https://en.wikipedia.org/wiki/Dunedin_(electorate)"
+  },
+  "East Coast": {
+    "title": "East Coast (electorate)",
+    "byParty": {
+      "National": 17007,
+      "Labour": 13808,
+      "NZ First": 2517,
+      "ACT": 1923,
+      "Green": 1765,
+      "TPM": 1235,
+      "DemocracyNZ": 625,
+      "Vision New Zealand": 323
+    },
+    "source": "https://en.wikipedia.org/wiki/East_Coast_(electorate)"
+  },
+  "East Coast Bays": {
+    "title": "East Coast Bays (electorate)",
+    "byParty": {
+      "National": 27687,
+      "Labour": 7334,
+      "ACT": 1584,
+      "NewZeal": 890,
+      "New Zealand Loyal": 710
+    },
+    "source": "https://en.wikipedia.org/wiki/East_Coast_Bays_(electorate)"
+  },
+  "Epsom": {
+    "title": "Epsom (New Zealand electorate)",
+    "byParty": {
+      "ACT": 17826,
+      "National": 9684,
+      "Labour": 6189,
+      "Green": 3537,
+      "TOP": 1803,
+      "NZ First": 573,
+      "New Zealand Loyal": 164
+    },
+    "source": "https://en.wikipedia.org/wiki/Epsom_(New_Zealand_electorate)"
+  },
+  "Hamilton East": {
+    "title": "Hamilton East (New Zealand electorate)",
+    "byParty": {
+      "National": 17950,
+      "Labour": 12890,
+      "ACT": 1679,
+      "TPM": 1227,
+      "NZ First": 1206,
+      "TOP": 1195,
+      "New Zealand Loyal": 517,
+      "Animal Justice Party Aotearoa New Zealand": 321
+    },
+    "source": "https://en.wikipedia.org/wiki/Hamilton_East_(New_Zealand_electorate)"
+  },
+  "Hamilton West": {
+    "title": "Hamilton West (New Zealand electorate)",
+    "byParty": {
+      "National": 17595,
+      "Labour": 11107,
+      "Green": 3230,
+      "ACT": 2216,
+      "NZ First": 1737,
+      "TOP": 1048,
+      "Animal Justice Party Aotearoa New Zealand": 326
+    },
+    "source": "https://en.wikipedia.org/wiki/Hamilton_West_(New_Zealand_electorate)"
+  },
+  "Hutt South": {
+    "title": "Hutt South",
+    "byParty": {
+      "National": 19144,
+      "Labour": 17812,
+      "Green": 2492,
+      "NZ First": 1228,
+      "TOP": 980,
+      "ACT": 556,
+      "New Zealand Loyal": 403,
+      "Vision New Zealand": 171
+    },
+    "source": "https://en.wikipedia.org/wiki/Hutt_South"
+  },
+  "Ilam": {
+    "title": "Ilam (electorate)",
+    "byParty": {
+      "National": 18693,
+      "TOP": 10863,
+      "Labour": 9010,
+      "Green": 2391,
+      "Aotearoa Legalise Cannabis Party": 488,
+      "DemocracyNZ": 329,
+      "New Conservatives Party": 300
+    },
+    "source": "https://en.wikipedia.org/wiki/Ilam_(electorate)"
+  },
+  "Invercargill": {
+    "title": "Invercargill (electorate)",
+    "byParty": {
+      "National": 20819,
+      "Labour": 10945,
+      "ACT": 1990,
+      "New Zealand Loyal": 1760,
+      "Aotearoa Legalise Cannabis Party": 1072,
+      "Vision NZ": 307
+    },
+    "source": "https://en.wikipedia.org/wiki/Invercargill_(electorate)"
+  },
+  "Kaikōura": {
+    "title": "Kaikōura (electorate)",
+    "byParty": {
+      "National": 20741,
+      "Labour": 9329,
+      "NZ First": 4347,
+      "ACT": 2624,
+      "Green": 2512,
+      "New Zealand Loyal": 921,
+      "DemocracyNZ": 509,
+      "New Conservative Party (New Zealand)": 237
+    },
+    "source": "https://en.wikipedia.org/wiki/Kaikōura_(electorate)"
+  },
+  "Kaipara ki Mahurangi": {
+    "title": "Kaipara ki Mahurangi",
+    "byParty": {
+      "National": 28281,
+      "Labour": 8822,
+      "Green": 4739,
+      "ACT": 2970,
+      "NZ First": 2531,
+      "DemocracyNZ": 1292
+    },
+    "source": "https://en.wikipedia.org/wiki/Kaipara_ki_Mahurangi"
+  },
+  "Kelston": {
+    "title": "Kelston (New Zealand electorate)",
+    "byParty": {
+      "Labour": 14413,
+      "National": 10017,
+      "Green": 3777,
+      "ACT": 1774,
+      "NZ First": 1142,
+      "TPM": 679,
+      "DemocracyNZ": 416,
+      "New Conservative Party (New Zealand)": 219
+    },
+    "source": "https://en.wikipedia.org/wiki/Kelston_(New_Zealand_electorate)"
+  },
+  "Mana": {
+    "title": "Mana (electorate)",
+    "byParty": {
+      "Labour": 20197,
+      "National": 12825,
+      "Green": 4200,
+      "NZ First": 1849,
+      "ACT": 1195,
+      "New Zealand Loyal": 586,
+      "Not A Party": 105
+    },
+    "source": "https://en.wikipedia.org/wiki/Mana_(electorate)"
+  },
+  "Māngere": {
+    "title": "Māngere (electorate)",
+    "byParty": {
+      "Labour": 17297,
+      "National": 5585,
+      "Green": 2700,
+      "TPM": 934,
+      "ACT": 670,
+      "Vision NZ": 535
+    },
+    "source": "https://en.wikipedia.org/wiki/Māngere_(electorate)"
+  },
+  "Manurewa": {
+    "title": "Manurewa (electorate)",
+    "byParty": {
+      "Labour": 16261,
+      "National": 9148,
+      "TPM": 1604,
+      "Vision NZ": 991
+    },
+    "source": "https://en.wikipedia.org/wiki/Manurewa_(electorate)"
+  },
+  "Maungakiekie": {
+    "title": "Maungakiekie (electorate)",
+    "byParty": {
+      "National": 16952,
+      "Labour": 12335,
+      "Green": 3138,
+      "ACT": 1291,
+      "NZ First": 920,
+      "Rock The Vote NZ": 136
+    },
+    "source": "https://en.wikipedia.org/wiki/Maungakiekie_(electorate)"
+  },
+  "Mt Albert": {
+    "title": "Mount Albert (New Zealand electorate)",
+    "byParty": {
+      "Labour": 13238,
+      "National": 13220,
+      "Green": 9296,
+      "ACT": 1485,
+      "TOP": 1318,
+      "[[Human Rights Party (New Zealand)": 104
+    },
+    "source": "https://en.wikipedia.org/wiki/Mount_Albert_(New_Zealand_electorate)"
+  },
+  "Mt Roskill": {
+    "title": "Mount Roskill (electorate)",
+    "byParty": {
+      "National": 15659,
+      "Labour": 14095,
+      "Green": 3379,
+      "ACT": 2179
+    },
+    "source": "https://en.wikipedia.org/wiki/Mount_Roskill_(electorate)"
+  },
+  "Napier": {
+    "title": "Napier (New Zealand electorate)",
+    "byParty": {
+      "National": 21344,
+      "Labour": 12474,
+      "Green": 2190,
+      "NZ First": 1729,
+      "ACT": 1211,
+      "DemocracyNZ": 765
+    },
+    "source": "https://en.wikipedia.org/wiki/Napier_(New_Zealand_electorate)"
+  },
+  "Nelson": {
+    "title": "Nelson (New Zealand electorate)",
+    "byParty": {
+      "Labour": 17541,
+      "National": 17515,
+      "Green": 2791,
+      "ACT": 2692,
+      "New Zealand Loyal": 1316,
+      "[[Progressive Party of Aotearoa New Zealand": 169
+    },
+    "source": "https://en.wikipedia.org/wiki/Nelson_(New_Zealand_electorate)"
+  },
+  "New Plymouth": {
+    "title": "New Plymouth (electorate)",
+    "byParty": {
+      "National": 22483,
+      "Labour": 15492,
+      "ACT": 1957,
+      "New Zealand Loyal": 1738,
+      "Animal Justice Party Aotearoa New Zealand": 562,
+      "New Nation Party": 252
+    },
+    "source": "https://en.wikipedia.org/wiki/New_Plymouth_(electorate)"
+  },
+  "North Shore": {
+    "title": "North Shore (New Zealand electorate)",
+    "byParty": {
+      "National": 24892,
+      "Labour": 8562,
+      "Green": 3663,
+      "ACT": 2061,
+      "TOP": 1229
+    },
+    "source": "https://en.wikipedia.org/wiki/North_Shore_(New_Zealand_electorate)"
+  },
+  "Northcote": {
+    "title": "Northcote (New Zealand electorate)",
+    "byParty": {
+      "National": 20807,
+      "Labour": 11537,
+      "Green": 3341,
+      "NZ First": 1048,
+      "ACT": 962,
+      "Vision New Zealand": 186
+    },
+    "source": "https://en.wikipedia.org/wiki/Northcote_(New_Zealand_electorate)"
+  },
+  "Northland": {
+    "title": "Northland (electorate)",
+    "byParty": {
+      "National": 16272,
+      "Labour": 10185,
+      "NZ First": 8143,
+      "DemocracyNZ": 3812,
+      "Green": 2424,
+      "ACT": 2135,
+      "New Zealand Loyal": 1331,
+      "Aotearoa Legalise Cannabis Party": 677,
+      "Independent politician": 369
+    },
+    "source": "https://en.wikipedia.org/wiki/Northland_(electorate)"
+  },
+  "Ōtaki": {
+    "title": "Ōtaki (electorate)",
+    "byParty": {
+      "National": 22145,
+      "Labour": 15874,
+      "Green": 2946,
+      "ACT": 1327,
+      "New Zealand Loyal": 1078,
+      "Not A Party": 75
+    },
+    "source": "https://en.wikipedia.org/wiki/Ōtaki_(electorate)"
+  },
+  "Pakuranga": {
+    "title": "Pakuranga (electorate)",
+    "byParty": {
+      "National": 26105,
+      "Labour": 7395,
+      "ACT": 1298,
+      "New Zealand Loyal": 490,
+      "Animal Justice Party Aotearoa New Zealand": 471,
+      "Rock the Vote NZ": 262
+    },
+    "source": "https://en.wikipedia.org/wiki/Pakuranga_(electorate)"
+  },
+  "Palmerston North": {
+    "title": "Palmerston North (electorate)",
+    "byParty": {
+      "Labour": 15339,
+      "National": 12252,
+      "Green": 3162,
+      "ACT": 2841,
+      "New Zealand Loyal": 1016,
+      "Animal Justice Party Aotearoa New Zealand": 402
+    },
+    "source": "https://en.wikipedia.org/wiki/Palmerston_North_(electorate)"
+  },
+  "Panmure-Ōtāhuhu": {
+    "title": "Panmure-Ōtāhuhu",
+    "byParty": {
+      "Labour": 15358,
+      "National": 7388,
+      "Green": 4312,
+      "ACT": 1238
+    },
+    "source": "https://en.wikipedia.org/wiki/Panmure-Ōtāhuhu"
+  },
+  "Papakura": {
+    "title": "Papakura (electorate)",
+    "byParty": {
+      "National": 24109,
+      "Labour": 10590,
+      "ACT": 3121,
+      "NZ First": 1728,
+      "New Zealand Loyal": 636,
+      "Vision New Zealand": 444,
+      "Independent politician": 427
+    },
+    "source": "https://en.wikipedia.org/wiki/Papakura_(electorate)"
+  },
+  "Port Waikato": {
+    "title": "Port Waikato (electorate)",
+    "byParty": {},
+    "source": "https://en.wikipedia.org/wiki/Port_Waikato_(electorate)",
+    "note": "No electorate vote at the 2023 general election; seat decided at the Port Waikato by-election. Not used for Transfer."
+  },
+  "Rangitata": {
+    "title": "Rangitata (electorate)",
+    "byParty": {
+      "National": 22792,
+      "Labour": 11946,
+      "NZ First": 2159,
+      "Green": 1784,
+      "New Zealand Loyal": 755,
+      "New Conservatives Party": 310,
+      "Independent politician": 170,
+      "New Nation Party": 92
+    },
+    "source": "https://en.wikipedia.org/wiki/Rangitata_(electorate)"
+  },
+  "Rangitīkei": {
+    "title": "Rangitīkei (electorate)",
+    "byParty": {
+      "National": 18945,
+      "Labour": 9160,
+      "ACT": 5914,
+      "NZ First": 3167,
+      "Green": 3153
+    },
+    "source": "https://en.wikipedia.org/wiki/Rangitīkei_(electorate)"
+  },
+  "Remutaka": {
+    "title": "Remutaka (electorate)",
+    "byParty": {
+      "Labour": 22344,
+      "National": 13485,
+      "Green": 2794,
+      "ACT": 1261,
+      "NewZeal": 899,
+      "Vision New Zealand": 409
+    },
+    "source": "https://en.wikipedia.org/wiki/Remutaka_(electorate)"
+  },
+  "Rongotai": {
+    "title": "Rongotai (electorate)",
+    "byParty": {
+      "Green": 16586,
+      "Labour": 13869,
+      "National": 8794,
+      "ACT": 1179,
+      "NZ First": 860,
+      "New Conservative Party (New Zealand)": 275,
+      "Animal Justice Party Aotearoa New Zealand": 216,
+      "Vision New Zealand": 96
+    },
+    "source": "https://en.wikipedia.org/wiki/Rongotai_(electorate)"
+  },
+  "Rotorua": {
+    "title": "Rotorua (electorate)",
+    "byParty": {
+      "National": 19339,
+      "Labour": 10416,
+      "TPM": 2731,
+      "ACT": 1732,
+      "NewZeal": 1252
+    },
+    "source": "https://en.wikipedia.org/wiki/Rotorua_(electorate)"
+  },
+  "Selwyn": {
+    "title": "Selwyn (electorate)",
+    "byParty": {
+      "National": 31504,
+      "Labour": 11722,
+      "ACT": 2822,
+      "New Zealand Loyal": 1022,
+      "New Conservatives Party": 506
+    },
+    "source": "https://en.wikipedia.org/wiki/Selwyn_(electorate)"
+  },
+  "Southland": {
+    "title": "Southland (electorate)",
+    "byParty": {
+      "National": 23231,
+      "Labour": 6020,
+      "Green": 3860,
+      "ACT": 2807,
+      "New Zealand Loyal": 2172,
+      "Aotearoa Legalise Cannabis Party": 687,
+      "Vision NZ": 228
+    },
+    "source": "https://en.wikipedia.org/wiki/Southland_(electorate)"
+  },
+  "Taieri": {
+    "title": "Taieri (electorate)",
+    "byParty": {
+      "Labour": 16579,
+      "National": 15136,
+      "Green": 3898,
+      "NZ First": 3069,
+      "ACT": 1697,
+      "New Zealand Loyal": 663
+    },
+    "source": "https://en.wikipedia.org/wiki/Taieri_(electorate)"
+  },
+  "Takanini": {
+    "title": "Takanini (electorate)",
+    "byParty": {
+      "National": 21936,
+      "Labour": 13161,
+      "ACT": 2037,
+      "Animal Justice Party Aotearoa New Zealand": 736
+    },
+    "source": "https://en.wikipedia.org/wiki/Takanini_(electorate)"
+  },
+  "Tāmaki": {
+    "title": "Tāmaki (electorate)",
+    "byParty": {
+      "ACT": 17858,
+      "National": 13700,
+      "Labour": 8968,
+      "New Zealand Loyal": 389
+    },
+    "source": "https://en.wikipedia.org/wiki/Tāmaki_(electorate)"
+  },
+  "Taranaki-King Country": {
+    "title": "Taranaki-King Country",
+    "byParty": {
+      "National": 24760,
+      "Labour": 10405,
+      "Vision NZ": 948
+    },
+    "source": "https://en.wikipedia.org/wiki/Taranaki-King_Country"
+  },
+  "Taupō": {
+    "title": "Taupō (electorate)",
+    "byParty": {
+      "National": 24858,
+      "Labour": 8353,
+      "Green": 3441,
+      "ACT": 2808,
+      "NZ First": 2114,
+      "New Zealand Loyal": 1410
+    },
+    "source": "https://en.wikipedia.org/wiki/Taupō_(electorate)"
+  },
+  "Tauranga": {
+    "title": "Tauranga (electorate)",
+    "byParty": {
+      "National": 18980,
+      "Labour": 9610,
+      "ACT": 3791,
+      "NZ First": 3403,
+      "Green": 2729,
+      "TPM": 613,
+      "Vision NZ": 285,
+      "Animal Justice Party Aotearoa New Zealand": 246,
+      "New Conservatives Party": 245
+    },
+    "source": "https://en.wikipedia.org/wiki/Tauranga_(electorate)"
+  },
+  "Tukituki": {
+    "title": "Tukituki (electorate)",
+    "byParty": {
+      "National": 21981,
+      "Labour": 11863,
+      "Green": 2383,
+      "ACT": 2016,
+      "New Zealand Loyal": 1030,
+      "Aotearoa Legalise Cannabis Party": 631,
+      "Independent": 671
+    },
+    "source": "https://en.wikipedia.org/wiki/Tukituki_(electorate)"
+  },
+  "Upper Harbour": {
+    "title": "Upper Harbour (New Zealand electorate)",
+    "byParty": {
+      "National": 21498,
+      "Labour": 10306,
+      "Green": 3018,
+      "ACT": 2313,
+      "NZ First": 1330,
+      "TOP": 1109,
+      "New Zealand Loyal": 387,
+      "Vision NZ": 137,
+      "New Zealand Sovereignty Party": 83
+    },
+    "source": "https://en.wikipedia.org/wiki/Upper_Harbour_(New_Zealand_electorate)"
+  },
+  "Waikato": {
+    "title": "Waikato (electorate)",
+    "byParty": {
+      "National": 27445,
+      "Labour": 8897,
+      "NZ First": 3587,
+      "TOP": 1548,
+      "Vision NZ": 420
+    },
+    "source": "https://en.wikipedia.org/wiki/Waikato_(electorate)"
+  },
+  "Waimakariri": {
+    "title": "Waimakariri (electorate)",
+    "byParty": {
+      "National": 26816,
+      "Labour": 13806,
+      "ACT": 2066,
+      "Leighton Baker Party": 1815,
+      "DemocracyNZ": 1530
+    },
+    "source": "https://en.wikipedia.org/wiki/Waimakariri_(electorate)"
+  },
+  "Wairarapa": {
+    "title": "Wairarapa (electorate)",
+    "byParty": {
+      "National": 20313,
+      "Labour": 17497,
+      "ACT": 1907,
+      "Green": 1832,
+      "New Zealand Loyal": 1737,
+      "TPM": 517
+    },
+    "source": "https://en.wikipedia.org/wiki/Wairarapa_(electorate)"
+  },
+  "Waitaki": {
+    "title": "Waitaki (electorate)",
+    "byParty": {
+      "National": 22675,
+      "Labour": 10524,
+      "Green": 3495,
+      "ACT": 2477,
+      "NZ First": 1823,
+      "New Zealand Loyal": 1125,
+      "DemocracyNZ": 1078
+    },
+    "source": "https://en.wikipedia.org/wiki/Waitaki_(electorate)"
+  },
+  "West Coast-Tasman": {
+    "title": "West Coast-Tasman",
+    "byParty": {
+      "National": 13317,
+      "Labour": 12300,
+      "Green": 2743,
+      "ACT": 2520,
+      "NZ First": 1799,
+      "NZ Outdoors & Freedom Party": 1554,
+      "New Zealand Loyal": 618,
+      "Money Free Party": 88
+    },
+    "source": "https://en.wikipedia.org/wiki/West_Coast-Tasman"
+  },
+  "Whanganui": {
+    "title": "Whanganui (electorate)",
+    "byParty": {
+      "National": 18484,
+      "Labour": 12972,
+      "NZ First": 3139,
+      "Green": 2049,
+      "ACT": 1683,
+      "Animal Justice Party Aotearoa New Zealand": 402
+    },
+    "source": "https://en.wikipedia.org/wiki/Whanganui_(electorate)"
+  },
+  "Whangaparāoa": {
+    "title": "Whangaparāoa (electorate)",
+    "byParty": {
+      "National": 30742,
+      "Labour": 7366,
+      "Green": 3487,
+      "ACT": 2522,
+      "New Zealand Loyal": 1489,
+      "DemocracyNZ": 652
+    },
+    "source": "https://en.wikipedia.org/wiki/Whangaparāoa_(electorate)"
+  },
+  "Whangārei": {
+    "title": "Whangārei (electorate)",
+    "byParty": {
+      "National": 20843,
+      "Labour": 9419,
+      "NZ First": 5371,
+      "Green": 2680,
+      "ACT": 1222,
+      "New Zealand Loyal": 1006,
+      "TPM": 859,
+      "DemocracyNZ": 578,
+      "Aotearoa Legalise Cannabis Party": 612,
+      "Independent politician": 140
+    },
+    "source": "https://en.wikipedia.org/wiki/Whangārei_(electorate)"
+  },
+  "Ōhāriu": {
+    "title": "Ōhāriu (electorate)",
+    "byParty": {
+      "Labour": 17565,
+      "National": 16305,
+      "Green": 4412,
+      "TOP": 2975,
+      "ACT": 759,
+      "Vision New Zealand": 214
+    },
+    "source": "https://en.wikipedia.org/wiki/Ōhāriu_(electorate)"
+  }
+}
