@@ -4,6 +4,8 @@ A single static page arguing tactical voting at the 2026 New Zealand election: p
 
 Live (once DNS is pointed): https://vote.coalitiontracker.nz
 
+GitHub Pages deploys from `main` via `.github/workflows/pages.yml`. Point a CNAME for `vote` at `dieuwedeboer.github.io`. The repo already has `CNAME` set to `vote.coalitiontracker.nz`.
+
 Standalone HTML/CSS/JS. Not part of the [coalition tracker](https://coalitiontracker.nz) codebase — that domain is only borrowed for hosting.
 
 ## Local
