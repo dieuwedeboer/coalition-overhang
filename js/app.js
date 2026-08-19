@@ -27,6 +27,12 @@ function fmt(n) {
   return Math.round(n).toLocaleString("en-NZ");
 }
 
+function fmtPct(n) {
+  if (n == null || Number.isNaN(n)) return "—";
+  const t = Math.round(n * 10) / 10;
+  return Number.isInteger(t) ? String(t) : t.toFixed(1);
+}
+
 function qualify(poll) {
   return [
     ["nat", poll.nat, true],
@@ -57,27 +63,51 @@ function largestRemainder(poll) {
   return out;
 }
 
-function projection(data, t = 0) {
-  const poll = data.poll;
+function switchPoll(poll, s = 0) {
+  const moved = poll.nat * (s / 100);
+  const pool = poll.nzf + poll.act;
+  if (pool <= 0 || moved === 0) return Object.assign({}, poll);
+  const nzfShare = poll.nzf / pool;
+  return Object.assign({}, poll, {
+    nat: poll.nat - moved,
+    nzf: poll.nzf + moved * nzfShare,
+    act: poll.act + moved * (1 - nzfShare),
+  });
+}
+
+function projection(data, t = 0, s = 0) {
+  const basePoll = data.poll;
+  const poll = switchPoll(basePoll, s);
   const of120 = largestRemainder(poll);
+  const baseOf120 = largestRemainder(basePoll);
   const natHaul = data.electorates.filter((e) => e.notionalWinner === "National").length;
   const natOverhang = Math.max(0, natHaul - of120.nat);
-  const tactical = data.electorates.filter((e) => flipsAt(e, t)).length;
+  const tactical = data.electorates.filter((e) => addsHaul(e, t)).length;
   const tpmElec = data.tpmElectoratesAssumed;
   const tpmOverhang = Math.max(0, tpmElec - (of120.tpm || 0));
   const natSeats = natHaul + tactical;
+  const overhang = Math.max(0, natSeats - of120.nat);
+  const dangerCount = data.dangerCount || 5;
   return {
+    basePoll,
     poll,
     of120,
+    baseOf120,
     natHaul,
     natOverhang,
+    overhang,
+    dangerCount,
     tactical,
     tpmElec,
     tpmOverhang,
     natSeats,
     coalition: natSeats + of120.act + of120.nzf,
+    pollCoalition: baseOf120.nat + (baseOf120.nzf || 0) + (baseOf120.act || 0),
     house: 120 + natOverhang + tactical + tpmOverhang,
     transfer: t,
+    switchShare: s,
+    nzfGain: of120.nzf - baseOf120.nzf,
+    actGain: of120.act - baseOf120.act,
   };
 }
 
@@ -98,6 +128,10 @@ function flipsAt(e, t) {
   if (e.actSeat || e.natLead == null) return false;
   const moved = Math.round((t / 100) * (e.pool || 0));
   return e.natLead + moved > 0 && holder(e) !== "National";
+}
+
+function addsHaul(e, t) {
+  return flipsAt(e, t) && e.notionalWinner !== "National";
 }
 
 function closeTarget(e) {
@@ -156,29 +190,139 @@ function seatCopy(e, t) {
   return parts.join(" ");
 }
 
+function setGain(id, n) {
+  const el = $(id);
+  if (!el) return;
+  if (n > 0) {
+    el.textContent = "+" + n;
+    el.hidden = false;
+  } else {
+    el.textContent = "";
+    el.hidden = true;
+  }
+}
+
+function tightCopy(n) {
+  const seats = n === 1 ? "seat" : "seats";
+  return `${n} tight ${seats} to hold`;
+}
+
+function splitShareCopy(n) {
+  if (n === 10) return "one in ten Coalition voters";
+  if (n === 20) return "one in five Coalition voters";
+  if (n === 25) return "one in four Coalition voters";
+  if (n === 50) return "half of Coalition voters";
+  return `${n}% of Coalition voters`;
+}
+
+function pitchCopy(p) {
+  const extra = p.coalition - p.pollCoalition;
+  const mp = extra === 1 ? "MP" : "MPs";
+  if (extra <= 0) {
+    return "Splitting votes is how the Coalition grows beyond the poll’s share of 120.";
+  }
+  if (p.switchShare === p.transfer && p.switchShare > 0) {
+    return `If ${splitShareCopy(p.switchShare)} split their votes, the Coalition would gain <b>${extra} extra ${mp}</b>.`;
+  }
+  return `At this split, the Coalition would gain <b>${extra} extra ${mp}</b>.`;
+}
+
 function renderProjection(p) {
-  $("#proj-nat").textContent = p.of120.nat;
-  $("#proj-over").textContent = "+" + p.natOverhang;
-  const tac = $("#proj-tac");
-  tac.textContent = "+" + p.tactical;
-  tac.parentElement.classList.toggle("is-hot", p.tactical > 0);
-  $("#proj-coal").textContent = p.coalition;
+  const base = p.basePoll;
   const poll = p.poll;
+  const baselineOver = Math.max(0, p.natSeats - p.baseOf120.nat);
+  $("#proj-nat").textContent = p.natSeats;
+  $("#proj-over").textContent = "+" + p.overhang;
+  $("#proj-nzf").textContent = p.of120.nzf;
+  $("#proj-act").textContent = p.of120.act;
+  $("#proj-coal").textContent = p.coalition;
+  setGain("#proj-nzf-gain", p.nzfGain);
+  setGain("#proj-act-gain", p.actGain);
+
+  const natBits = [tightCopy(p.dangerCount)];
+  if (p.tactical) natBits.push(`+${p.tactical} winnable`);
+  const natSub = $("#proj-nat-sub");
+  if (natSub) natSub.textContent = natBits.join(" · ");
+  const overSub = $("#proj-over-sub");
+  if (overSub) {
+    overSub.textContent = p.switchShare
+      ? "Share of the 120 fell · partners gained"
+      : "Electorates beyond the share of the 120";
+  }
+
+  $("#tile-nat").classList.toggle("is-hot", p.tactical > 0);
+  $("#tile-over").classList.toggle("is-hot", p.overhang > baselineOver);
+  $("#tile-nzf").classList.toggle("is-hot", p.nzfGain > 0);
+  $("#tile-act").classList.toggle("is-hot", p.actGain > 0);
+  $("#tile-coal").classList.toggle("is-hot", p.switchShare > 0 || p.tactical > 0);
+
+  const pitch = $("#proj-pitch");
+  if (pitch) pitch.innerHTML = pitchCopy(p);
+
+  const hold = $("#proj-hold");
+  if (hold) {
+    hold.innerHTML =
+      `<strong>${p.dangerCount} tight National seats</strong> could go on current polling. ` +
+      `Coalition electorate votes have to hold them, or the overhang shrinks. ` +
+      `<a href="#finder">See them in the Finder</a>.`;
+  }
+
   const seatsWord = p.tactical === 1 ? "seat is" : "seats are";
   const tacticalLine = p.tactical
     ? `At ${p.transfer}% of the 2023 NZ First + ACT candidate pool, ${p.tactical} Labour/Green ${seatsWord} winnable.`
     : `At ${p.transfer}% of the 2023 NZ First + ACT candidate pool, no Labour or Green seat is winnable.`;
+  const quotaLine = p.switchShare > 0
+    ? `${base.org}, ${base.dates}: National’s ${fmtPct(base.nat)}% party vote entitles it to ${p.baseOf120.nat} of 120 — already filled by ${p.natHaul} electorates, so National takes <strong>no list MPs</strong>. If ${p.switchShare}% of that party vote moved to NZ First and ACT (in their current poll ratio), the quota drops to <strong>${p.of120.nat} of 120</strong> and the overhang grows. National still keeps the electorates. NZ First ${fmtPct(base.nzf)}% → ${fmtPct(poll.nzf)}% → <strong>${p.of120.nzf}</strong>. ACT ${fmtPct(base.act)}% → ${fmtPct(poll.act)}% → <strong>${p.of120.act}</strong>.`
+    : `${base.org}, ${base.dates}: National’s ${fmtPct(base.nat)}% party vote entitles it to ${p.of120.nat} of 120 — already filled by ${p.natHaul} electorates, so National takes <strong>no list MPs</strong>. NZ First ${fmtPct(base.nzf)}% → <strong>${p.of120.nzf}</strong>. ACT ${fmtPct(base.act)}% → <strong>${p.of120.act}</strong>.`;
   $("#proj-note").innerHTML =
-    `${poll.org}, ${poll.dates}: National ${poll.nat}% → <strong>${p.of120.nat} of 120</strong>. ` +
-    `Hold all ${p.natHaul} notional electorates and National takes <strong>no list MPs</strong> — a +${p.natOverhang} probable overhang. ` +
+    `${quotaLine} ` +
     `${tacticalLine} ` +
-    `<a href="${poll.url}">Poll source</a>.`;
+    `<a href="${base.url}">Poll source</a>.`;
+
+  const switchLive = $("#switch-live");
+  if (switchLive) {
+    switchLive.innerHTML = p.switchShare
+      ? `NZ First <b>${p.baseOf120.nzf} → ${p.of120.nzf}</b> · ACT <b>${p.baseOf120.act} → ${p.of120.act}</b> · National stays at <b>${p.natSeats}</b>`
+      : `Partners stay on the poll: NZ First <b>${p.of120.nzf}</b>, ACT <b>${p.of120.act}</b>. National stays at <b>${p.natSeats}</b>`;
+  }
+  const transferOutcome = $("#transfer-outcome");
+  if (transferOutcome) {
+    transferOutcome.innerHTML =
+      `<b>+${p.overhang}</b> overhang · ${tightCopy(p.dangerCount)}` +
+      (p.tactical ? ` · <b>+${p.tactical}</b> winnable` : "");
+  }
+
+  const majority = Math.floor(p.house / 2) + 1;
+  const pct = (n) => ((n / p.house) * 100).toFixed(2) + "%";
+  const segNat = $("#seg-nat");
+  const segNzf = $("#seg-nzf");
+  const segAct = $("#seg-act");
+  if (segNat) segNat.style.width = pct(p.natSeats);
+  if (segNzf) segNzf.style.width = pct(p.of120.nzf);
+  if (segAct) segAct.style.width = pct(p.of120.act);
+  const mark = $("#majority-mark");
+  if (mark) mark.style.left = ((majority / p.house) * 100).toFixed(2) + "%";
+  const houseCap = $("#house-cap");
+  if (houseCap) {
+    houseCap.innerHTML =
+      `Coalition <b>${p.coalition}</b> of <b>${p.house}</b> · majority is <b>${majority}</b>`;
+  }
+  const sum = $("#proj-sum");
+  if (sum) {
+    sum.innerHTML =
+      `<b>${p.natSeats}</b> Nat + <b>${p.of120.nzf}</b> NZ First + <b>${p.of120.act}</b> ACT = <b>${p.coalition}</b>`;
+  }
+
   const live = $("#transfer-live");
   if (live) {
+    const switchBit = p.switchShare
+      ? ` · ${p.switchShare}% of National’s party vote to the partners`
+      : "";
     live.innerHTML =
-      `Hypothetical at ${p.transfer}%: ` +
-      `<b>+${p.natOverhang}</b> probable overhang, ` +
-      `<b>+${p.tactical}</b> tactical.<br>` +
+      `Hypothetical at ${p.transfer}% of the candidate pool${switchBit}: ` +
+      `<b>+${p.overhang}</b> overhang` +
+      (p.tactical ? `, <b>+${p.tactical}</b> winnable` : "") +
+      ` · ${tightCopy(p.dangerCount)}.<br>` +
       `<b>${p.natSeats}</b> Nat + <b>${p.of120.nzf}</b> NZ First + <b>${p.of120.act}</b> ACT = <b>${p.coalition}</b>`;
   }
 }
@@ -220,6 +364,7 @@ function matches(e, q) {
 
 const FIRST_SEATS = 12;
 const MORE_SEATS = 6;
+const DEFAULT_SPLIT = 10;
 
 function renderSeats(data, t, query, limit) {
   const q = query.trim().toLowerCase();
@@ -278,26 +423,64 @@ function fillDatalist(data) {
     .join("");
 }
 
+function fillRange(el) {
+  if (!el) return;
+  el.style.setProperty("--pct", el.value + "%");
+}
+
 async function main() {
   startCountdown();
   const data = await fetch("data/site.json").then((r) => r.json());
   fillDatalist(data);
-  const slider = $("#transfer");
+  const switchEl = $("#switch");
+  const transfer = $("#transfer");
+  const transferFinder = $("#transfer-finder");
   const search = $("#q");
   const more = $("#show-more");
   let shown = FIRST_SEATS;
+
+  const setTransfer = (v) => {
+    if (transfer) transfer.value = v;
+    if (transferFinder) transferFinder.value = v;
+    fillRange(transfer);
+    fillRange(transferFinder);
+    const out = $("#transfer-out");
+    const outFinder = $("#transfer-finder-out");
+    if (out) out.textContent = v + "%";
+    if (outFinder) outFinder.textContent = v + "%";
+  };
+
   const paint = () => {
-    const t = Number(slider.value);
-    $("#transfer-out").textContent = t + "%";
-    renderProjection(projection(data, t));
+    const t = Number(transfer ? transfer.value : 0);
+    const s = Number(switchEl ? switchEl.value : 0);
+    if (switchEl) {
+      fillRange(switchEl);
+      const out = $("#switch-out");
+      if (out) out.textContent = s + "%";
+    }
+    renderProjection(projection(data, t, s));
     renderSeats(data, t, search.value, shown);
   };
-  slider.addEventListener("input", paint);
+
+  if (switchEl) switchEl.addEventListener("input", paint);
+  if (transfer) {
+    transfer.addEventListener("input", () => {
+      setTransfer(transfer.value);
+      paint();
+    });
+  }
+  if (transferFinder) {
+    transferFinder.addEventListener("input", () => {
+      setTransfer(transferFinder.value);
+      paint();
+    });
+  }
   search.addEventListener("input", paint);
   more.addEventListener("click", () => {
     shown += MORE_SEATS;
     paint();
   });
+  setTransfer(transfer ? transfer.value : DEFAULT_SPLIT);
   paint();
 }
 
