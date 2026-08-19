@@ -4,7 +4,7 @@
     "notionals": "https://www.tallyroom.com.au/62140",
     "candidateVotes": "Wikipedia MMP election boxes citing Electoral Commission official results for each 2023 electorate.",
     "poll": "https://www.taxpayers.org.nz/aug2026_nztucurghs17668",
-    "notes": "Candidate votes are official 2023 counts on 2023 boundaries. 2026 names and notional winners are Tally Room. NZ First/ACT are 0 where they stood no candidate. Port Waikato had no general-election electorate vote."
+    "notes": "Candidate votes are official 2023 counts on 2023 boundaries. Who holds a seat is the current holder. 2026 names are Tally Room. NZ First/ACT are 0 where they stood no candidate. Port Waikato had no general-election electorate vote; National holds it from the by-election."
   },
   "tpmElectoratesAssumed": 4,
   "poll": {
@@ -20,7 +20,7 @@
     "opp": 6.1
   },
   "natPollSeats": 40,
-  "dangerCount": 5,
+  "dangerCount": 4,
   "pinned": [],
   "electorates": [
     {
@@ -955,7 +955,7 @@
       "actVotes": 0,
       "nzfVotes": 0,
       "pool": 0,
-      "winner2023": null,
+      "winner2023": "National",
       "winnerVotes": null,
       "second2023": null,
       "secondVotes": null,

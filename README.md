@@ -16,10 +16,6 @@ python3 -m http.server 8080
 
 ## Data
 
-`data/site.json` holds the current poll, 2026-notional winners, and official 2023 candidate votes.
-
-- Notionals: [Tally Room](https://www.tallyroom.com.au/62140)
-- 2023 candidate votes: Wikipedia MMP boxes citing [Electoral Commission official results](https://www.electionresults.govt.nz/electionresults_2023/)
-- Poll: edit `poll` in `data/site.json` when a new Curia lands
+`data/site.json` holds the current poll, who currently holds each general electorate, and official 2023 candidate votes.
 
 Language is in `CONTEXT.md`. Decisions that would look odd without context are in `docs/adr/`.

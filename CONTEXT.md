@@ -53,11 +53,15 @@ A named person or organisation that has agreed to be listed as backing this page
 _Avoid_: Using “endorsed” for a Citation
 
 **Notional**:
-A 2023 vote count remapped onto a 2026 electorate. Used where the boundary or name changed. Not a poll and not a guess.
-_Avoid_: Estimate, guess, projection (projection is the parliament-level number)
+A 2023 vote remapped onto a 2026 electorate. This page does not use them. Who holds a seat is the current holder. Boundary changes are noted only where they affect how in-play the seat is.
+_Avoid_: Notional winner, notional map, treating a remap as the current holder
+
+**Boundary change**:
+A 2026-map redraw large enough that the 2023 majority is a weaker guide to how in-play the seat is. Marked * on the Finder. Not a new winner.
+_Avoid_: Notional flip, “flipped on the 2026 map”
 
 **Finder**:
-The on-page list of every general electorate, 2026 names, showing 2023 candidate vote *counts*. Who holds a seat is the 2023 winner, not a notional 2026 flip. The tightest National-held seats — the natural overhang — are labelled at risk. Then seats National is up to 2,500 votes short of, labelled “winnable with x votes” — green if the Transfer covers it, grey if not. Then every other seat by the size of National’s lead or deficit, closest first. Loads the first 12. Show more reveals another six. Autocomplete.
+The on-page list of every general electorate, 2026 names, showing 2023 candidate vote *counts*. Who holds a seat is who currently holds it, not a notional 2026 flip. Seats with a big Boundary change are marked *. The tightest National-held seats — the natural overhang — are labelled at risk. Then seats National is up to 2,500 votes short of, labelled “winnable with x votes” — green if the Transfer covers it, grey if not. Then every other seat by the size of National’s lead or deficit, closest first. Loads the first 12. Show more reveals another six. Autocomplete.
 _Avoid_: Swingometer, percentages as the primary figure
 
 **Transfer**:
@@ -73,7 +77,7 @@ The latest Taxpayers’ Union–Curia national party-vote poll, named and dated.
 _Avoid_: Poll average, poll of polls
 
 **Projection**:
-Allocate 120 seats from the Poll — after Switch, if any — among parties at or over 5% plus Te Pāti Māori (electorates), using largest remainder. Then add overhangs. National’s headline number is electorate seats: every 2026-notional National electorate, plus each Labour or Green seat winnable at the Transfer. Switch does not change that haul. Overhang is one number: National’s electorates minus its share of the 120. The tightest National holds are called out as still needing Coalition electorate votes. Switch and Transfer sit together as both sides of the Split.
+Allocate 120 seats from the Poll — after Switch, if any — among parties at or over 5% plus Te Pāti Māori (electorates), using largest remainder. Then add overhangs. National’s headline number is electorate seats: every seat National currently holds, plus each Labour or Green seat winnable at the Transfer. Switch does not change that haul. Overhang is one number: National’s electorates minus its share of the 120. The tightest National holds are called out as still needing Coalition electorate votes. Switch and Transfer sit together as both sides of the Split.
 _Avoid_: Guarantee, forecast, unstoppable
 
 **Hero**:

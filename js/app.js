@@ -80,14 +80,14 @@ function projection(data, t = 0, s = 0) {
   const poll = switchPoll(basePoll, s);
   const of120 = largestRemainder(poll);
   const baseOf120 = largestRemainder(basePoll);
-  const natHaul = data.electorates.filter((e) => e.notionalWinner === "National").length;
+  const natHaul = data.electorates.filter((e) => holder(e) === "National").length;
   const natOverhang = Math.max(0, natHaul - of120.nat);
-  const tactical = data.electorates.filter((e) => addsHaul(e, t)).length;
+  const tactical = data.electorates.filter((e) => flipsAt(e, t)).length;
   const tpmElec = data.tpmElectoratesAssumed;
   const tpmOverhang = Math.max(0, tpmElec - (of120.tpm || 0));
   const natSeats = natHaul + tactical;
   const overhang = Math.max(0, natSeats - of120.nat);
-  const dangerCount = data.dangerCount || 5;
+  const dangerCount = Math.max(0, natHaul - baseOf120.nat);
   return {
     basePoll,
     poll,
@@ -119,7 +119,7 @@ function votesNeeded(e) {
 
 function holder(e) {
   if (e.actSeat) return "ACT";
-  return e.winner2023 || e.notionalWinner || "";
+  return e.winner2023 || "";
 }
 
 const CLOSE_SHORT = 2500;
@@ -128,10 +128,6 @@ function flipsAt(e, t) {
   if (e.actSeat || e.natLead == null) return false;
   const moved = Math.round((t / 100) * (e.pool || 0));
   return e.natLead + moved > 0 && holder(e) !== "National";
-}
-
-function addsHaul(e, t) {
-  return flipsAt(e, t) && e.notionalWinner !== "National";
 }
 
 function closeTarget(e) {
@@ -186,7 +182,7 @@ function seatCopy(e, t) {
     }
   }
   if (e.nameChanged) parts.push(`2023 name: ${e.oldName}.`);
-  if (e.winnerChanged) parts.push("Notional winner flipped on the 2026 map.");
+  if (e.redraw) parts.push("Big boundary changes on the 2026 map, so the 2023 margin is a weaker guide to how in-play this seat is.");
   return parts.join(" ");
 }
 
@@ -365,7 +361,9 @@ const DEFAULT_SPLIT = 10;
 function renderSeats(data, t, query, limit) {
   const q = query.trim().toLowerCase();
   const pinnedNames = new Set(data.pinned || []);
-  const list = sortSeats(data.electorates, data.dangerCount || 5).filter((e) => matches(e, q));
+  const pollNat = largestRemainder(data.poll).nat;
+  const dangerCount = Math.max(0, data.electorates.filter((e) => holder(e) === "National").length - pollNat);
+  const list = sortSeats(data.electorates, dangerCount).filter((e) => matches(e, q));
   const searching = Boolean(q);
   const visible = searching ? list : list.slice(0, limit);
   const root = $("#seat-list");
@@ -389,7 +387,7 @@ function renderSeats(data, t, query, limit) {
     if (holder(e) === "National") el.classList.add("held");
     if (e.actSeat) el.classList.add("act");
     if (pinnedNames.has(e.name)) el.classList.add("pinned");
-    const star = e.redraw ? ` <span class="star" title="Name or winner changed on the 2026 map">*</span>` : "";
+    const star = e.redraw ? ` <span class="star" title="Big boundary changes — the 2023 result is a weaker guide to how in-play this seat is">*</span>` : "";
     const old = e.nameChanged ? ` <span class="meta">(was ${e.oldName})</span>` : "";
     const lead = e.natLead == null
       ? `<span class="year">2023</span>`
