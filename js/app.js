@@ -170,7 +170,7 @@ function renderProjection(p) {
     : `At ${p.transfer}% of the 2023 NZ First + ACT candidate pool, no Labour or Green seat is winnable.`;
   $("#proj-note").innerHTML =
     `${poll.org}, ${poll.dates}: National ${poll.nat}% → <strong>${p.of120.nat} of 120</strong>. ` +
-    `Holding all ${p.natHaul} notional electorates is <strong>Zero List Seats</strong> and a +${p.natOverhang} probable overhang. ` +
+    `Hold all ${p.natHaul} notional electorates and National takes <strong>no list MPs</strong> — a +${p.natOverhang} probable overhang. ` +
     `${tacticalLine} ` +
     `<a href="${poll.url}">Poll source</a>.`;
   const live = $("#transfer-live");

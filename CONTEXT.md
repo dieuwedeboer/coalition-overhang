@@ -1,6 +1,6 @@
 # Split Your Vote
 
-A voter-facing page that converts National-leaning New Zealanders to the Split, so National takes Zero List Seats (and ideally an Overhang) and the Coalition is more likely to be returned at the 2026 general election.
+A voter-facing page that converts National-leaning New Zealanders to the Split. On current polling National takes Zero List Seats (and ideally an Overhang). The Coalition is more likely to be returned at the 2026 general election.
 
 ## Language
 
@@ -17,8 +17,8 @@ What this page asks people to do. Using the two MMP votes for different parties 
 _Avoid_: Strategic voting (US/UK flavour)
 
 **Convert**:
-The job of the page. A visitor who still wants the Coalition leaves intending to vote tactically and cast the Split. Explanation exists only to make that conversion stick.
-_Avoid_: Showcase, exhibit, educate (those are not the job)
+The job of the page. A visitor who still wants the Coalition leaves intending to vote tactically and cast the Split. Explanation may teach the two votes and the TPM split so that conversion sticks.
+_Avoid_: Showcase, exhibit
 
 **Electorate vote**:
 The vote for a local constituency candidate. Under the Split, this goes to National.
@@ -29,7 +29,7 @@ The vote that determines each qualifying party’s share of the 120-seat allocat
 _Avoid_: List vote, proportional vote
 
 **Surplus party vote**:
-A National party vote cast after National’s electorates already fill its party-vote entitlement. On this page that is a wasted vote: it buys no extra Coalition MP. The same vote to NZ First or ACT does. A protest vote for a non-parliamentary party elects nobody too.
+A National party vote cast after National’s electorates already fill its party-vote entitlement. On current polling that vote elects nobody extra. The same vote to NZ First or ACT does. A protest vote for a non-parliamentary party elects nobody too. Keep “wasted” only with the polling frame.
 _Avoid_: Naming Conservative, Loyal, Freedom or other specific minnows
 
 **Overhang**:
@@ -37,8 +37,12 @@ When a party wins more electorates than its party-vote seat entitlement. It keep
 _Avoid_: Extra seats, bonus seats, extra list seats
 
 **Zero List Seats**:
-The campaign success condition and slogan. National wins only electorates and takes no list MPs. An Overhang is the ideal form of this. A failure is National still receiving list seats, not a small Overhang.
-_Avoid_: Unstoppable, dozens of overhang seats, guaranteed (2ETEKA’s frame, not this page’s)
+Predicted outcome if National holds its electorates on current polling. The page reports it. It does not campaign to deny National list MPs. An Overhang is the form this takes.
+_Avoid_: Unstoppable, dozens of overhang seats, guaranteed (2ETEKA’s frame, not this page’s); “is the point”
+
+**TPM split**:
+Te Pāti Māori’s 2026 ask — electorate them, party vote Labour or Green. Cite as the left-side use of the same MMP feature. This page is the Coalition-side explanation.
+_Avoid_: “they started it,” “if they can we can,” payback
 
 **Citation**:
 A public argument for the Split by someone else, linked and dated. Cards are direct quotes only, no section heading, in this order: Brash’s “unstopable” centre-right quote, Seymour’s mug line, Williams’s “way forward” sentence, Baker’s “party you actually like most” thread. Not “Seymour green-lit this,” not Family First, not Farrar.
@@ -69,16 +73,12 @@ Allocate 120 seats from the Poll among parties at or over 5% plus Te Pāti Māor
 _Avoid_: Guarantee, forecast, unstoppable
 
 **Hero**:
-The on-page headline and Card line: “Two Votes, Two MPs.” The supporting line is “Maximise your votes by splitting them.” Always “split your votes,” plural. Zero List Seats stays on the Shareable and in the explain.
+The on-page headline and Card line: “Two Votes, Two MPs.” The supporting line is “Maximise your votes by splitting them.” Always “split your votes,” plural.
 _Avoid_: Inventing further slogans
 
 **Card**:
-The default social preview (`og:image`). A two-tick Split with the Hero line, not the Luxon Shareable. Placeholder art until you refine it.
-_Avoid_: Using a Shareable as the unsolicited preview
-
-**Shareable**:
-An unpaid image on the page that a visitor can download and post. Not a paid advertisement. First set is three or four placeholders; one of them is Luxon scowling on a repeating ZERO LIST SEATS field in National blue. No National Party logo. No claim the party produced it.
-_Avoid_: Ad, poster campaign, merch
+The default social preview (`og:image`). A two-tick Split with the Hero line. Placeholder art until you refine it.
+_Avoid_: Using campaign art as the unsolicited preview
 
 **Promoter**:
 Dieuwe de Boer, publishing unpaid personal political views as an individual. The footer line is “Authorised by Dieuwe de Boer” with links to this GitHub repo and https://x.com/rightmindsnz. That is a promoter statement, not party-secretary authorisation.

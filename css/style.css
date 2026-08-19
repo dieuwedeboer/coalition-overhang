@@ -197,6 +197,24 @@ h2 {
 }
 .sub { color: var(--muted); margin: 0 0 1.4rem; max-width: 42rem; }
 
+.how-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 42rem;
+}
+.how-list li {
+  margin: 0 0 0.65rem;
+  padding: 0 0 0.65rem;
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.4;
+}
+.how-list li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 .explain-grid {
   display: grid;
   gap: 1rem;
