@@ -239,16 +239,12 @@ function renderProjection(p) {
   setGain("#proj-nzf-gain", p.nzfGain);
   setGain("#proj-act-gain", p.actGain);
 
-  const natBits = [tightCopy(p.dangerCount)];
+  const natBits = [`Polling at ${p.baseOf120.nat} + ${tightCopy(p.dangerCount)}`];
   if (p.tactical) natBits.push(`+${p.tactical} winnable`);
   const natSub = $("#proj-nat-sub");
   if (natSub) natSub.textContent = natBits.join(" · ");
   const overSub = $("#proj-over-sub");
-  if (overSub) {
-    overSub.textContent = p.switchShare
-      ? "Share of the 120 fell · partners gained"
-      : "Electorates beyond the share of the 120";
-  }
+  if (overSub) overSub.textContent = "Electorates beyond the share of the 120";
 
   $("#tile-nat").classList.toggle("is-hot", p.tactical > 0);
   $("#tile-over").classList.toggle("is-hot", p.overhang > baselineOver);
