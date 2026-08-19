@@ -90,23 +90,64 @@
     <div class="wrap">
       <h2>On current polling, National takes zero list seats.</h2>
       <p class="sub">A National party vote elects no extra Coalition MP. The electorates have already filled its share. Maximise your votes by splitting them: party-vote NZ First or ACT.</p>
-      <div class="explain-grid">
-        <div class="card">
-          <h3>Zero list seats, on current polling</h3>
-          <p>On the latest Taxpayers’ Union–Curia poll National is entitled to 40 of the 120. On the 2026 notional map it holds 45 electorates. Hold those seats and National takes <strong>no list MPs</strong> — a five-seat overhang. Extra National party votes refill a filled quota. They do not add a Coalition MP.</p>
-          <p>Move the party vote to a partner still taking list seats. That is how one ballot helps put two Coalition MPs in the House.</p>
-          <p class="warn">On current polling a National party vote elects nobody extra. A protest vote for a non-parliamentary party is the same. Party-vote NZ First or ACT to keep the left out.</p>
+      <div class="card explain-card">
+        <h3>Zero list seats, on current polling</h3>
+        <p>On the latest Taxpayers’ Union–Curia poll National is entitled to 40 of the 120. On the 2026 notional map it holds 45 electorates. Hold those seats and National takes <strong>no list MPs</strong> — a five-seat overhang. Extra National party votes refill a filled quota. They do not add a Coalition MP.</p>
+        <p>Move the party vote to a partner still taking list seats. That is how one ballot helps put two Coalition MPs in the House.</p>
+        <p class="warn">On current polling a National party vote elects nobody extra. A protest vote for a non-parliamentary party is the same. Party-vote NZ First or ACT to keep the left out.</p>
+      </div>
+
+      <div class="projection">
+        <h3>Projection · polls + overhangs</h3>
+        <p class="proj-pitch" id="proj-pitch"></p>
+        <div class="proj-nums" aria-live="polite">
+          <div id="tile-nat"><b id="proj-nat">—</b><span>National</span><p class="tile-sub" id="proj-nat-sub"></p></div>
+          <div id="tile-over"><b id="proj-over">—</b><span>Overhang</span><p class="tile-sub" id="proj-over-sub"></p></div>
+          <div id="tile-nzf"><b id="proj-nzf">—</b><span>NZ First</span><em class="gain" id="proj-nzf-gain" hidden></em></div>
+          <div id="tile-act"><b id="proj-act">—</b><span>ACT</span><em class="gain" id="proj-act-gain" hidden></em></div>
+          <div id="tile-coal"><b id="proj-coal" class="c-sum">—</b><span>Coalition</span></div>
         </div>
-        <div class="projection">
-          <h3>Projection · polls + overhangs</h3>
-          <div class="proj-nums" aria-live="polite">
-            <div><b id="proj-nat">—</b><span>National (poll)</span></div>
-            <div><b id="proj-over">—</b><span>Probable overhang</span></div>
-            <div><b id="proj-tac">—</b><span>Tactical overhang</span></div>
-            <div><b id="proj-coal" class="c-sum">—</b><span>Coalition</span></div>
+        <p class="proj-hold" id="proj-hold"></p>
+
+        <p class="split-banner">Both sides of the Split</p>
+        <div class="split-panel" role="group" aria-label="Both sides of the Split">
+          <div class="split-leg">
+            <div class="split-head">
+              <div>
+                <p class="split-kicker">Party vote</p>
+                <p class="split-flow">National <span aria-hidden="true">→</span> NZ First / ACT</p>
+              </div>
+              <span class="slider-readout" id="switch-out">10%</span>
+            </div>
+            <label for="switch">Share of National’s party vote treated as moving to the partners</label>
+            <input id="switch" class="slider" type="range" min="0" max="100" value="10">
+            <p class="split-outcome" id="switch-live"></p>
           </div>
-          <p class="proj-note" id="proj-note">Loading poll…</p>
+          <div class="split-leg">
+            <div class="split-head">
+              <div>
+                <p class="split-kicker">Electorate vote</p>
+                <p class="split-flow">NZ First / ACT <span aria-hidden="true">→</span> National</p>
+              </div>
+              <span class="slider-readout" id="transfer-out">10%</span>
+            </div>
+            <label for="transfer">Share of the 2023 NZ First + ACT candidate vote treated as moving to National</label>
+            <input id="transfer" class="slider" type="range" min="0" max="100" value="10">
+            <p class="split-outcome" id="transfer-outcome"></p>
+          </div>
         </div>
+
+        <div class="house-bar" aria-hidden="true">
+          <div class="house-track">
+            <span class="seg seg-nat" id="seg-nat"></span>
+            <span class="seg seg-nzf" id="seg-nzf"></span>
+            <span class="seg seg-act" id="seg-act"></span>
+            <i class="majority-mark" id="majority-mark"></i>
+          </div>
+          <p class="house-cap" id="house-cap"></p>
+        </div>
+        <p class="proj-sum" id="proj-sum"></p>
+        <p class="proj-note" id="proj-note">Loading poll…</p>
       </div>
     </div>
   </section>
@@ -121,9 +162,9 @@
           <input id="q" type="search" list="electorate-list" placeholder="Start typing… e.g. Nelson, Hutt South" autocomplete="off">
           <datalist id="electorate-list"></datalist>
         </div>
-        <div>
-          <label for="transfer">Share of the 2023 NZ First + ACT <em>candidate</em> vote treated as moving to National: <span class="slider-readout" id="transfer-out">100%</span></label>
-          <input id="transfer" type="range" min="0" max="100" value="100">
+        <div class="finder-slider on-paper">
+          <label for="transfer-finder">Share of the 2023 NZ First + ACT <em>candidate</em> vote treated as moving to National: <span class="slider-readout" id="transfer-finder-out">10%</span></label>
+          <input id="transfer-finder" class="slider" type="range" min="0" max="100" value="10">
           <p class="transfer-live" id="transfer-live" aria-live="polite"></p>
         </div>
       </div>
@@ -137,7 +178,7 @@
     <div class="wrap">
       <div class="citations">
         <article class="card cite-card">
-          <blockquote>“The centre-right could win this election comfortably. If all the people that wanted the coalition government back in power voted for National with their electorate vote (except for Epson and Tamaki) and give their party vote to either ACT or New Zealand First, the right would be unstopable.”</blockquote>
+          <blockquote>“The centre-right could win this election comfortably. If all the people that wanted the coalition government back in power voted for National with their electorate vote (except for Epson and Tamaki) and give their party vote to either ACT or New Zealand First, the right would be unstoppable.”</blockquote>
           <div class="cite-who">
             <img class="avatar" src="assets/people/brash.jpg" alt="" width="56" height="56">
             <div>

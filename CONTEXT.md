@@ -45,7 +45,7 @@ Te Pāti Māori’s 2026 ask — electorate them, party vote Labour or Green. Ci
 _Avoid_: “they started it,” “if they can we can,” payback
 
 **Citation**:
-A public argument for the Split by someone else, linked and dated. Cards are direct quotes only, no section heading, in this order: Brash’s “unstopable” centre-right quote, Seymour’s mug line, Williams’s “way forward” sentence, Baker’s “party you actually like most” thread. Not “Seymour green-lit this,” not Family First, not Farrar.
+A public argument for the Split by someone else, linked and dated. Cards are direct quotes only, no section heading, in this order: Brash’s “unstoppable” centre-right quote, Seymour’s mug line, Williams’s “way forward” sentence, Baker’s “party you actually like most” thread. Not “Seymour green-lit this,” not Family First, not Farrar.
 _Avoid_: Endorsed by, suggested this site, green light
 
 **Endorsement**:
@@ -61,15 +61,19 @@ The on-page list of every general electorate, 2026 names, showing 2023 candidate
 _Avoid_: Swingometer, percentages as the primary figure
 
 **Transfer**:
-2023 NZ First plus ACT *candidate* votes (zero where they did not stand). Shown as a vote count. A slider still asks what share of that pool moves to National. Default is 100%, which is +5 National overhang and +7 tactical — 12 overhang seats. Each Labour or Green seat that becomes winnable at that share is a tactical overhang on the Projection. It does not move party votes and does not touch Epsom or Tāmaki.
+2023 NZ First plus ACT *candidate* votes (zero where they did not stand). Shown as a vote count. A slider still asks what share of that pool moves to National. Default is 10% — one in ten, a reachable Split, not the full pool. Each Labour or Green seat that becomes winnable at that share is added to National’s electorate haul on the Projection. It does not move party votes and does not touch Epsom or Tāmaki.
 _Avoid_: Swing, percentage-only margins
+
+**Switch**:
+The share of the current National party-vote Poll treated as moving to NZ First and ACT, split in those two parties’ current poll ratio. The page does not pick a partner. It does not move electorate votes and does not change National’s seat count — those seats are electorates. Default is 10%, same as Transfer: one in ten Coalition voters splitting both ways. Raising it cuts National’s share of the 120, grows the Overhang, and adds list seats to the partners.
+_Avoid_: Swing, leakage, defection, party transfer (that is Transfer)
 
 **Poll**:
 The latest Taxpayers’ Union–Curia national party-vote poll, named and dated. The page is updated when a new one lands. Not a blend of pollsters.
 _Avoid_: Poll average, poll of polls
 
 **Projection**:
-Allocate 120 seats from the Poll among parties at or over 5% plus Te Pāti Māori (electorates), using largest remainder. Then add overhangs. National is assumed to hold every 2026-notional National electorate — on the Aug 2026 Curia poll that is +5 National overhang. The Transfer slider adds a tactical overhang for each Labour or Green seat winnable at that share. Other parties keep their 120 allocation. The box updates as the slider moves.
+Allocate 120 seats from the Poll — after Switch, if any — among parties at or over 5% plus Te Pāti Māori (electorates), using largest remainder. Then add overhangs. National’s headline number is electorate seats: every 2026-notional National electorate, plus each Labour or Green seat winnable at the Transfer. Switch does not change that haul. Overhang is one number: National’s electorates minus its share of the 120. The tightest National holds are called out as still needing Coalition electorate votes. Switch and Transfer sit together as both sides of the Split.
 _Avoid_: Guarantee, forecast, unstoppable
 
 **Hero**:
