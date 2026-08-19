@@ -1,16 +1,14 @@
 # Two Votes, Two MPs
 
-A single static page arguing tactical voting at the 2026 New Zealand election: party vote NZ First or ACT, electorate National, so National takes Zero List Seats and the Coalition is more likely to be returned.
+https://vote.coalitiontracker.nz
 
-Live (once DNS is pointed): https://vote.coalitiontracker.nz
+A page that converts Coalition voters to the Split at the 2026 New Zealand general election: party vote NZ First or ACT, electorate vote National.
 
-GitHub Pages deploys from `main` via `.github/workflows/pages.yml`. Point a CNAME for `vote` at `dieuwedeboer.github.io`. The repo already has `CNAME` set to `vote.coalitiontracker.nz`.
+On current polling National already fills its share of the 120 with electorates. Extra National party votes elect nobody. The same party vote to NZ First or ACT still can. Hold those seats and National takes zero list MPs — an overhang — and the Coalition is more likely to be returned.
 
-Standalone HTML/CSS/JS. Not part of the [coalition tracker](https://coalitiontracker.nz) codebase — that domain is only borrowed for hosting.
+The page explains the two MMP votes, projects the House from the latest Taxpayers’ Union–Curia poll plus overhangs, and lists every general electorate with 2023 candidate vote counts: seats at risk, seats winnable, then the rest by how close National is.
 
 ## Local
-
-Any static server from the repo root:
 
 ```sh
 python3 -m http.server 8080
@@ -18,14 +16,10 @@ python3 -m http.server 8080
 
 ## Data
 
-`data/site.json` is the whole model: the current Taxpayers’ Union–Curia poll, 2026-notional winners, and official 2023 candidate vote counts.
+`data/site.json` holds the current poll, 2026-notional winners, and official 2023 candidate votes.
 
 - Notionals: [Tally Room](https://www.tallyroom.com.au/62140)
-- 2023 candidate votes: Wikipedia MMP boxes citing [Electoral Commission official results](https://www.electionresults.govt.nz/electionresults_2023/) (raw dump in `data/votes-2023.json`)
-- Poll: edit `poll` in `data/site.json` when a new Curia lands, then rebuild the page
+- 2023 candidate votes: Wikipedia MMP boxes citing [Electoral Commission official results](https://www.electionresults.govt.nz/electionresults_2023/)
+- Poll: edit `poll` in `data/site.json` when a new Curia lands
 
-Set `pinned` in `data/site.json` to raise specific electorates later.
-
-## Language
-
-See `CONTEXT.md`. Decisions that would look odd without context are in `docs/adr/`.
+Language is in `CONTEXT.md`. Decisions that would look odd without context are in `docs/adr/`.
