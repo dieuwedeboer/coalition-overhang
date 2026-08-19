@@ -151,7 +151,7 @@ function winnableLabel(e) {
 function badge(e, t) {
   const who = holder(e);
   if (who === "ACT") return ["ACT holds this", "badge-act"];
-  if (e.danger) return ["Probable overhang", "badge-danger"];
+  if (e.danger) return ["At risk", "badge-danger"];
   if (who === "National") return ["National holds this", "badge-held"];
   if (flipsAt(e, t)) return [winnableLabel(e), "badge-flip"];
   if (closeTarget(e)) return [winnableLabel(e), "badge-maybe"];
@@ -327,34 +327,34 @@ function renderProjection(p) {
   }
 }
 
-function margin(e) {
-  return e.majority == null ? 999999 : e.majority;
+function absLead(e) {
+  return e.natLead == null ? 999999 : Math.abs(e.natLead);
+}
+
+function byAbsLead(a, b) {
+  return absLead(a) - absLead(b) || a.name.localeCompare(b.name, "en");
 }
 
 function sortSeats(seats, dangerCount = 5) {
   const nat = [];
-  const labGreen = [];
-  const rest = [];
+  const others = [];
   for (const e of seats) {
-    const who = holder(e);
-    if (who === "National") nat.push(e);
-    else if (who === "Labour" || who === "Green") labGreen.push(e);
-    else rest.push(e);
+    if (holder(e) === "National") nat.push(e);
+    else others.push(e);
   }
-  nat.sort((a, b) => margin(a) - margin(b) || a.name.localeCompare(b.name, "en"));
-  labGreen.sort((a, b) => margin(a) - margin(b) || a.name.localeCompare(b.name, "en"));
-  const overhang = nat.slice(0, dangerCount).map((e) => Object.assign({}, e, { danger: true }));
+  nat.sort(byAbsLead);
+  const atRisk = nat.slice(0, dangerCount).map((e) => Object.assign({}, e, { danger: true }));
   const leftoverNat = nat.slice(dangerCount).map((e) => Object.assign({}, e, { danger: false }));
-  const labTagged = labGreen.map((e) => Object.assign({}, e, { danger: false }));
-  const partyRank = { National: 0, ACT: 1, Green: 2 };
-  const tail = leftoverNat.concat(rest).map((e) => Object.assign({}, e, { danger: false }));
-  tail.sort((a, b) => {
-    const pa = partyRank[holder(a)] ?? 9;
-    const pb = partyRank[holder(b)] ?? 9;
-    if (pa !== pb) return pa - pb;
-    return margin(a) - margin(b) || a.name.localeCompare(b.name, "en");
-  });
-  return overhang.concat(labTagged, tail);
+  const restPool = leftoverNat.concat(others.map((e) => Object.assign({}, e, { danger: false })));
+  const winnable = [];
+  const tail = [];
+  for (const e of restPool) {
+    if (closeTarget(e)) winnable.push(e);
+    else tail.push(e);
+  }
+  winnable.sort(byAbsLead);
+  tail.sort(byAbsLead);
+  return atRisk.concat(winnable, tail);
 }
 
 function matches(e, q) {

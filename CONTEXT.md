@@ -57,7 +57,7 @@ A 2023 vote count remapped onto a 2026 electorate. Used where the boundary or na
 _Avoid_: Estimate, guess, projection (projection is the parliament-level number)
 
 **Finder**:
-The on-page list of every general electorate, 2026 names, showing 2023 candidate vote *counts*. Who holds a seat is the 2023 winner, not a notional 2026 flip. The natural overhang is the National-held seats with the smallest majority, labelled probable overhang. Then Labour and Green seats, tightest first. Then the rest by holder. A seat National is up to 2,500 votes short of is “winnable with x votes” — green if the Transfer covers it, grey if not. Loads the first 12. Show more reveals another six. Autocomplete.
+The on-page list of every general electorate, 2026 names, showing 2023 candidate vote *counts*. Who holds a seat is the 2023 winner, not a notional 2026 flip. The tightest National-held seats — the natural overhang — are labelled at risk. Then seats National is up to 2,500 votes short of, labelled “winnable with x votes” — green if the Transfer covers it, grey if not. Then every other seat by the size of National’s lead or deficit, closest first. Loads the first 12. Show more reveals another six. Autocomplete.
 _Avoid_: Swingometer, percentages as the primary figure
 
 **Transfer**:
