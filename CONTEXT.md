@@ -49,7 +49,7 @@ A public argument for the Split by someone else, linked and dated. Cards are dir
 _Avoid_: Endorsed by, suggested this site, green light
 
 **Guide**:
-Another public page about the two votes, listed under the Citations. The heading is “More resources on strategic voting.” Not an Endorsement of this page, and not a Citation. Order: Harry Mowbray’s Split Your Vote, Penny Marie’s Make Your Vote Count, Family First’s Value Your Vote, Reality Check Radio’s Vote Smart 2026. Family First’s page explains the wasted vote. It does not give the Split.
+Another public page about the two votes, listed under the Citations. The heading is “More resources on strategic voting.” Not an Endorsement of this page, and not a Citation. Order: RCR Media’s Vote Smart 2026, Family First’s Value Your Vote, Harry Mowbray’s Split Your Vote, Penny Marie’s Make Your Vote Count. Family First’s page explains the wasted vote. It does not give the Split.
 _Avoid_: Endorsed by, these sites back this page, calling Family First’s page a Split instruction
 
 **Endorsement**:
