@@ -456,8 +456,6 @@ h2 {
 .p-nzf { fill: var(--nzf); background: var(--nzf); }
 .p-tpm { fill: #8d5a32; background: #8d5a32; }
 .p-opp { fill: #2aabb2; background: #2aabb2; }
-.p-dot.p-nzf { stroke: #cfc6b6; stroke-width: 1.15; }
-.swatch.p-nzf { box-shadow: inset 0 0 0 1px #cfc6b6; }
 .p-dot.is-over { stroke: #e8c547; stroke-width: 1.7; }
 .parliament-key {
   display: flex;
