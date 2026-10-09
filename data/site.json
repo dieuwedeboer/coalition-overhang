@@ -1,26 +1,27 @@
 {
-  "generated": "2026-08-17",
+  "generated": "2026-10-09",
   "sources": {
     "notionals": "https://www.tallyroom.com.au/62140",
     "candidateVotes": "Wikipedia MMP election boxes citing Electoral Commission official results for each 2023 electorate.",
-    "poll": "https://www.taxpayers.org.nz/aug2026_nztucurghs17668",
+    "poll": "https://www.taxpayers.org.nz/oct2026_nztucurpolljjhhfas",
     "notes": "Candidate votes are official 2023 counts on 2023 boundaries. Who holds a seat is the current holder. 2026 names are Tally Room. NZ First/ACT are 0 where they stood no candidate. Port Waikato had no general-election electorate vote; National holds it from the by-election."
   },
   "tpmElectoratesAssumed": 4,
   "poll": {
     "org": "Taxpayers' Union–Curia",
-    "dates": "1–4 Aug 2026",
-    "url": "https://www.taxpayers.org.nz/aug2026_nztucurghs17668",
-    "nat": 31,
-    "lab": 27.8,
-    "grn": 10.1,
-    "act": 7.3,
-    "nzf": 9.1,
-    "tpm": 1.5,
-    "opp": 6.1
+    "dates": "1–5 Oct 2026",
+    "url": "https://www.taxpayers.org.nz/oct2026_nztucurpolljjhhfas",
+    "nat": 28.5,
+    "lab": 28.2,
+    "grn": 13.3,
+    "act": 9.2,
+    "nzf": 12.0,
+    "tpm": 1.4,
+    "opp": 5,
+    "oppPublished": 4.8
   },
-  "natPollSeats": 40,
-  "dangerCount": 4,
+  "natPollSeats": 35,
+  "dangerCount": 9,
   "pinned": [],
   "electorates": [
     {
@@ -349,7 +350,7 @@
       "name": "Epsom",
       "oldName": "Epsom",
       "notionalWinner": "ACT",
-      "actSeat": true,
+      "actSeat": false,
       "redraw": false,
       "nameChanged": false,
       "winnerChanged": false,
@@ -1176,7 +1177,7 @@
       "name": "Tāmaki",
       "oldName": "Tāmaki",
       "notionalWinner": "ACT",
-      "actSeat": true,
+      "actSeat": false,
       "redraw": false,
       "nameChanged": false,
       "winnerChanged": false,

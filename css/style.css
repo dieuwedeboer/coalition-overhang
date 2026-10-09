@@ -432,33 +432,58 @@ h2 {
   box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--navy);
 }
 
-.house-bar { margin-top: 1.05rem; }
-.house-track {
-  position: relative;
+.parliament { margin-top: 1.2rem; }
+.parliament-label {
+  margin: 0 0 0.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--gold-2);
+}
+.parliament-cap {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  color: #ddd4c4;
+}
+.parliament-cap b { color: #f4efe4; font-family: var(--serif); font-size: 1.2rem; }
+.parliament-svg svg { width: 100%; height: auto; display: block; }
+.p-dot { stroke: none; }
+.p-nat { fill: #3b7fc4; background: #3b7fc4; }
+.p-lab { fill: #d22630; background: #d22630; }
+.p-grn { fill: #1f8a45; background: #1f8a45; }
+.p-act { fill: #f5c518; background: #f5c518; }
+.p-nzf { fill: var(--nzf); background: var(--nzf); }
+.p-tpm { fill: #8d5a32; background: #8d5a32; }
+.p-opp { fill: #2aabb2; background: #2aabb2; }
+.p-dot.p-nzf { stroke: #cfc6b6; stroke-width: 1.15; }
+.swatch.p-nzf { box-shadow: inset 0 0 0 1px #cfc6b6; }
+.p-dot.is-over { stroke: #e8c547; stroke-width: 1.7; }
+.parliament-key {
   display: flex;
-  height: 14px;
-  border-radius: 999px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.08);
+  flex-wrap: wrap;
+  gap: 0.35rem 0.85rem;
+  list-style: none;
+  margin: 0.15rem 0 0;
+  padding: 0;
+  font-size: 0.82rem;
+  color: #ddd4c4;
 }
-.seg { display: block; height: 100%; }
-.seg-nat { background: #2a6fbb; }
-.seg-nzf { background: #111; }
-.seg-act { background: var(--act); }
-.majority-mark {
-  position: absolute;
-  top: -3px;
-  bottom: -3px;
-  width: 2px;
-  background: #fff;
-  box-shadow: 0 0 0 1px rgba(12, 27, 48, 0.45);
+.parliament-key b { color: #f4efe4; font-family: var(--serif); }
+.swatch {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  margin-right: 0.32rem;
+  vertical-align: -0.08rem;
 }
-.house-cap {
-  margin: 0.4rem 0 0;
+.p-over { color: var(--gold-2); }
+.parliament-note {
+  margin: 0.55rem 0 0;
   font-size: 0.82rem;
   color: #cfc6b6;
 }
-.house-cap b { color: #f4efe4; font-family: var(--serif); }
 .proj-sum {
   margin: 0.7rem 0 0;
   font-size: 1.05rem;
@@ -621,6 +646,12 @@ blockquote {
   background-size: 0.62rem;
 }
 .soc:hover { opacity: 0.8; }
+
+.guide-list { display: grid; gap: 0.8rem; }
+@media (min-width: 800px) {
+  .guide-list { grid-template-columns: 1fr 1fr; }
+}
+.guide-list .meta { margin-top: -0.2rem; }
 
 .site-footer {
   background: var(--navy);

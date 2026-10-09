@@ -25,7 +25,7 @@
     <rect x="628" y="250" width="508" height="260" rx="14" fill="#1a2d48" stroke="#e8c547" stroke-opacity="0.45" stroke-width="2"/>
     <text x="656" y="298" fill="#e8c547" font-family="Liberation Serif, Georgia, serif" font-size="18" letter-spacing="4">ELECTORATE VOTE</text>
     <text x="656" y="368" fill="#f4efe4" font-family="Liberation Serif, Georgia, serif" font-size="44" font-weight="700">National</text>
-    <text x="656" y="418" fill="#cfc6b6" font-family="Liberation Serif, Georgia, serif" font-size="22">Except Epsom and Tāmaki.</text>
+    <text x="656" y="418" fill="#cfc6b6" font-family="Liberation Serif, Georgia, serif" font-size="22">In every electorate.</text>
   </g>
 
   <text x="64" y="580" fill="#9a9286" font-family="Liberation Serif, Georgia, serif" font-size="24">vote.coalitiontracker.nz</text>

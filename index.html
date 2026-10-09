@@ -62,7 +62,7 @@
         <div class="tick tick-electorate">
           <p class="label">Electorate vote</p>
           <strong>National</strong>
-          <span>The candidate most likely to win the seat for the Coalition — except Epsom and Tāmaki, which stay ACT.</span>
+          <span>The candidate most likely to win the seat for the Coalition.</span>
         </div>
       </div>
       <div class="hero-actions">
@@ -81,7 +81,7 @@
         <li><strong>Party vote</strong> — sets each qualifying party’s share of the 120. List MPs fill any gap.</li>
         <li><strong>Overhang</strong> — win more electorates than that share and you keep every seat, take no list MPs, and Parliament grows. Nobody else’s 120 allocation is cut.</li>
         <li><strong>On current polling National is likely to get zero list seats</strong> — this allows you to split your two votes and generate an overhang.</li>
-        <li><strong>Te Pāti Māori is officially running this vote splitting tactic on the left</strong> — electorate vote only, party vote for Labour/Green. This page explains it for Coalition voters.</li>
+        <li><strong>Te Pāti Māori is officially running strategic voting on the left</strong> — electorate vote only, party vote for Labour/Green. This page explains it for Coalition voters.</li>
       </ul>
     </div>
   </section>
@@ -92,7 +92,7 @@
       <p class="sub">A National party vote elects no extra Coalition MP. The electorates have already filled its share. Maximise your votes by splitting them: party-vote NZ First or ACT.</p>
       <div class="card explain-card">
         <h3>Zero list seats, on current polling</h3>
-        <p>On the latest Taxpayers’ Union–Curia poll National is entitled to 40 of the 120. It currently holds 44 electorates. Hold those seats and National takes <strong>no list MPs</strong> — a four-seat overhang. Extra National party votes refill a filled quota. They do not add a Coalition MP.</p>
+        <p>On the latest Taxpayers’ Union–Curia poll National is entitled to 35 of the 120, treating Opportunity’s 4.8% as 5%. It currently holds 44 electorates. Hold those seats and National takes <strong>no list MPs</strong> — a nine-seat overhang. Extra National party votes refill a filled quota. They do not add a Coalition MP.</p>
         <p>Move the party vote to a partner still taking list seats. That is how one ballot helps put two Coalition MPs in the House.</p>
         <p class="warn">On current polling a National party vote elects zero MPs. A protest vote for a non-parliamentary party is the same. Party-vote NZ First or ACT to keep the left out.</p>
       </div>
@@ -137,14 +137,12 @@
           </div>
         </div>
 
-        <div class="house-bar" aria-hidden="true">
-          <div class="house-track">
-            <span class="seg seg-nat" id="seg-nat"></span>
-            <span class="seg seg-nzf" id="seg-nzf"></span>
-            <span class="seg seg-act" id="seg-act"></span>
-            <i class="majority-mark" id="majority-mark"></i>
-          </div>
-          <p class="house-cap" id="house-cap"></p>
+        <div class="parliament">
+          <p class="parliament-label">The House</p>
+          <p class="parliament-cap" id="parliament-cap"></p>
+          <div class="parliament-svg" id="parliament-svg"></div>
+          <ul class="parliament-key" id="parliament-key"></ul>
+          <p class="parliament-note" id="parliament-note"></p>
         </div>
         <p class="proj-sum" id="proj-sum"></p>
         <p class="proj-note" id="proj-note">Loading poll…</p>
@@ -178,7 +176,7 @@
     <div class="wrap">
       <div class="citations">
         <article class="card cite-card">
-          <blockquote>“The centre-right could win this election comfortably. If all the people that wanted the coalition government back in power voted for National with their electorate vote (except for Epson and Tamaki) and give their party vote to either ACT or New Zealand First, the right would be unstoppable.”</blockquote>
+          <blockquote>“The centre-right could win this election comfortably. If all the people that wanted the coalition government back in power voted for National with their electorate vote ... and give their party vote to either ACT or New Zealand First, the right would be unstoppable.”</blockquote>
           <div class="cite-who">
             <img class="avatar" src="assets/people/brash.jpg" alt="" width="56" height="56">
             <div>
@@ -216,6 +214,54 @@
               <p class="cite-meta"><a href="https://x.com/ChantelleBakerr/status/2088450113752760674">15 August 2026</a></p>
             </div>
           </div>
+        </article>
+        <article class="card cite-card">
+          <blockquote>“When the other side are using certain tactics to skew the results you’re going to have to react. You don’t just carry on with previous ways as if it doesn’t matter.”</blockquote>
+          <div class="cite-who">
+            <img class="avatar" src="assets/people/peters.jpg" alt="" width="56" height="56">
+            <div>
+              <p class="cite-name">Winston Peters <a class="soc" href="https://x.com/winstonpeters" aria-label="Winston Peters on X">X</a></p>
+              <p class="cite-meta"><a href="https://www.nzherald.co.nz/video/herald-now/ryan-bridge-today/suicidal-speech-winston-peters-criticises-sir-john-key-on-tactical-voting-ryan-bridge-today/ZEEKUAYYWLKJRZMVZ2VGR5CIRQ/">Ryan Bridge Today, 28 September 2026</a></p>
+            </div>
+          </div>
+        </article>
+        <article class="card cite-card">
+          <blockquote>“Party vote ACT or NZ First. Electorate vote National. That’s a straightforward message. I think voters deserve more credit.”</blockquote>
+          <div class="cite-who">
+            <img class="avatar" src="assets/people/mowbray.jpg" alt="" width="56" height="56">
+            <div>
+              <p class="cite-name">Nick Mowbray <a class="soc" href="https://x.com/NMowbray23" aria-label="Nick Mowbray on X">X</a></p>
+              <p class="cite-meta"><a href="https://x.com/NMowbray23/status/2106190652447027294">3 October 2026</a></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="guides">
+    <div class="wrap">
+      <h2>More resources on strategic voting</h2>
+      <div class="guide-list">
+        <article class="card">
+          <h3><a href="https://splityourvote.co.nz/">Split Your Vote</a></h3>
+          <p class="meta">Harry Mowbray</p>
+          <p>Electorate vote National. Party vote ACT or NZ First.</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://makeyourvotecount.nz/">Make Your Vote Count</a></h3>
+          <p class="meta">Penny Marie</p>
+          <p>A slider that moves National’s party vote to NZ First and ACT, and shows the seats.</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://www.valueyourvote.org.nz/">Value Your Vote</a></h3>
+          <p class="meta">Family First</p>
+          <p>Their 2026 guide to parties and candidates, with an explainer on the two votes and the wasted vote.</p>
+        </article>
+        <article class="card">
+          <h3><a href="https://www.votesmart2026.co.nz/">Vote Smart 2026</a></h3>
+          <p class="meta">Reality Check Radio</p>
+          <p>Explainers on the overhang, wasted votes, and using the two votes differently.</p>
         </article>
       </div>
     </div>

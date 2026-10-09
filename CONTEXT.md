@@ -12,12 +12,12 @@ _Avoid_: Centre-right (includes parties this page treats as a problem), the gove
 The instruction the page exists to convert people to, always said in this order: party vote NZ First or ACT, electorate vote National.
 _Avoid_: Two ticks (means both votes to the same party), ticket-split
 
-**Tactical voting**:
+**Strategic voting**:
 What this page asks people to do. Using the two MMP votes for different parties so the Coalition gets more seats than two ticks to National would.
-_Avoid_: Strategic voting (US/UK flavour)
+_Avoid_: Tactical voting
 
 **Convert**:
-The job of the page. A visitor who still wants the Coalition leaves intending to vote tactically and cast the Split. Explanation may teach the two votes and the TPM split so that conversion sticks.
+The job of the page. A visitor who still wants the Coalition leaves intending to vote strategically and cast the Split. Explanation may teach the two votes and the TPM split so that conversion sticks.
 _Avoid_: Showcase, exhibit
 
 **Electorate vote**:
@@ -41,16 +41,20 @@ Predicted outcome if National holds its electorates on current polling. The page
 _Avoid_: Unstoppable, dozens of overhang seats, guaranteed (2ETEKA’s frame, not this page’s); “is the point”
 
 **TPM split**:
-Te Pāti Māori’s 2026 ask — electorate them, party vote Labour or Green. Cite as the left-side use of the same MMP feature. This page is the Coalition-side explanation.
+Te Pāti Māori’s 2026 ask — electorate them, party vote Labour or Green. The left-side use of strategic voting. This page is the Coalition-side explanation.
 _Avoid_: “they started it,” “if they can we can,” payback
 
 **Citation**:
-A public argument for the Split by someone else, linked and dated. Cards are direct quotes only, no section heading, in this order: Brash’s “unstoppable” centre-right quote, Seymour’s mug line, Williams’s “way forward” sentence, Baker’s “party you actually like most” thread. Not “Seymour green-lit this,” not Family First, not Farrar.
+A public argument for the Split by someone else, linked and dated. Cards are direct quotes only, no section heading, in this order: Brash’s “unstoppable” centre-right quote, Seymour’s mug line, Williams’s “way forward” sentence, Baker’s “party you actually like most” thread, Peters’s “you don’t just carry on” line, Mowbray’s “straightforward message”. Not “Seymour green-lit this,” not Family First, not Farrar.
 _Avoid_: Endorsed by, suggested this site, green light
+
+**Guide**:
+Another public page about the two votes, listed under the Citations. The heading is “More resources on strategic voting.” Not an Endorsement of this page, and not a Citation. Order: Harry Mowbray’s Split Your Vote, Penny Marie’s Make Your Vote Count, Family First’s Value Your Vote, Reality Check Radio’s Vote Smart 2026. Family First’s page explains the wasted vote. It does not give the Split.
+_Avoid_: Endorsed by, these sites back this page, calling Family First’s page a Split instruction
 
 **Endorsement**:
 A named person or organisation that has agreed to be listed as backing this page. Only added when they say so.
-_Avoid_: Using “endorsed” for a Citation
+_Avoid_: Using “endorsed” for a Citation or a Guide
 
 **Notional**:
 A 2023 vote remapped onto a 2026 electorate. This page does not use them. Who holds a seat is the current holder. Boundary changes are noted only where they affect how in-play the seat is.
@@ -65,7 +69,7 @@ The on-page list of every general electorate, 2026 names, showing 2023 candidate
 _Avoid_: Swingometer, percentages as the primary figure
 
 **Transfer**:
-2023 NZ First plus ACT *candidate* votes (zero where they did not stand). Shown as a vote count. A slider still asks what share of that pool moves to National. Default is 10% — one in ten, a reachable Split, not the full pool. Each Labour or Green seat that becomes winnable at that share is added to National’s electorate haul on the Projection. It does not move party votes and does not touch Epsom or Tāmaki.
+2023 NZ First plus ACT *candidate* votes (zero where they did not stand). Shown as a vote count. A slider still asks what share of that pool moves to National. Default is 10% — one in ten, a reachable Split, not the full pool. Each seat National does not hold that becomes winnable at that share is added to National’s electorate haul on the Projection. It does not move party votes. The same rule applies in every general electorate.
 _Avoid_: Swing, percentage-only margins
 
 **Switch**:
@@ -73,12 +77,16 @@ The share of the current National party-vote Poll treated as moving to NZ First 
 _Avoid_: Swing, leakage, defection, party transfer (that is Transfer)
 
 **Poll**:
-The latest Taxpayers’ Union–Curia national party-vote poll, named and dated. The page is updated when a new one lands. Not a blend of pollsters.
-_Avoid_: Poll average, poll of polls
+The latest Taxpayers’ Union–Curia national party-vote poll, named and dated. The page is updated when a new one lands. Opportunity is entered at 5% when it polls just short of the threshold, and the published figure stays in the note.
+_Avoid_: Poll average, poll of polls, silent rounding
 
 **Projection**:
-Allocate 120 seats from the Poll — after Switch, if any — among parties at or over 5% plus Te Pāti Māori (electorates), using largest remainder. Then add overhangs. National’s headline number is electorate seats: every seat National currently holds, plus each Labour or Green seat winnable at the Transfer. Switch does not change that haul. Overhang is one number: National’s electorates minus its share of the 120. The tightest National holds are called out as still needing Coalition electorate votes. Switch and Transfer sit together as both sides of the Split.
+Allocate 120 seats from the Poll — after Switch, if any — among parties at or over 5% plus Te Pāti Māori (electorates), using largest remainder. Then add overhangs. National’s headline number is electorate seats: every seat National currently holds, plus each other seat winnable at the Transfer. Switch does not change that haul. Overhang is one number: National’s electorates minus its share of the 120. The tightest National holds are called out as still needing Coalition electorate votes. Switch and Transfer sit together as both sides of the Split.
 _Avoid_: Guarantee, forecast, unstoppable
+
+**House**:
+The chamber drawn under the sliders: one mark per seat in the Projection. Te Pāti Māori keeps the four electorates it holds. A gold ring is a seat beyond that party’s share of the 120.
+_Avoid_: Curia’s no-overhang table, counting an independent Māori MP as Te Pāti Māori
 
 **Hero**:
 The on-page headline and Card line: “Two Votes, Two MPs.” The supporting line is “Maximise your votes by splitting them.” Always “split your votes,” plural.
